@@ -1,0 +1,15 @@
+\mode<presentation>
+
+\DeclareOptionBeamer{background}{\PassOptionsToPackage{background=#1}{beamerouterthemeUMRoss}}
+\DeclareOptionBeamer{logo}{\PassOptionsToPackage{logo=#1}{beamerouterthemeUMRoss}}
+\ProcessOptionsBeamer
+
+\usecolortheme{UMRoss}	% calls beamercolorthemeUMRoss.sty
+\usefonttheme{UMRoss}		% calls beamerfontthemeUMRoss.sty
+\useinnertheme{UMRoss}	% calls beamerinnerthemeUMRoss.sty
+\useoutertheme{UMRoss}	% calls beamerouterthemeUMRoss.sty
+
+\setbeamertemplate{navigation symbols}{} 	% turn off pdf navigation symbols
+
+\mode<all>
+\endinput

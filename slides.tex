@@ -1,0 +1,117 @@
+% the sample slide is created with 16:9 aspect ratio
+\documentclass[aspectratio=169]{beamer}
+%\documentclass{beamer}
+\useoutertheme{miniframes}
+
+
+% remove the options if you do not want to have them
+\usetheme[
+	background=empty,
+	logo=rosslogo
+]{UMRoss}
+
+% the background and logo are in the images directory
+\graphicspath{{images/}}
+
+% information for the title page
+\author{Tae Uk Seo}
+\title{Michigan Ross Beamer Theme}
+\subtitle{An unofficial theme for Michigan Ross}
+\institute{Stephen M. Ross School of Business, University of Michigan}
+\date{\today}
+
+\begin{document}
+	% use plain option to remove the page number from the title slide
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+
+\section{Introduction}
+	
+	\begin{frame}{Welcome to Ross!}
+	Michigan is a Midwestern state of the United States of America. 
+		\begin{itemize}
+			\item Residents of Michigan are known as \emph{Michiganders}.
+				\begin{itemize}
+					\item I am a subitem
+				\end{itemize}
+			\item Artes, Scientia, Veritas.
+			\item \textbf{this is a bold text}
+			\item \alert{this is an alert}.
+		\end{itemize}
+	\end{frame}
+
+	\begin{frame}{Blocks}
+		\framesubtitle{This is a subtitle}
+		\begin{block}{Standard Block}
+			This is a standard block.
+		\end{block}
+	
+	\end{frame}
+	
+	\begin{frame}{Math}
+		Mathematics is the queen of sciences and arithmetic is the queen of mathematics.
+		\begin{align*}
+			\Pr(Y \geq 120) &= \Pr\left(Y-n\mu \geq 120-n\mu \right)\\
+			&= \Pr\left( \frac{Y-n\mu }{\sqrt{n}\sigma} \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
+			&=\Pr\left( Z \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
+			&=\Pr\left( Z \geq \frac{120-100 \cdot 1 }{10 \cdot 1} \right)\\
+			&=\Pr\left( Z \geq 2\right)
+		\end{align*}
+	\end{frame}
+
+	\begin{frame}{Two Columns}
+		We can also add two columns in the slides.
+		\begin{columns}[t]
+			\begin{column}[T]{0.4\textwidth}
+				This is the first column. In this column, we can also add a block for instance.
+				\vspace{1em}
+				\begin{block}{Block}
+					I am a block in a column.
+				\end{block}
+			\end{column}
+			\begin{column}[T]{0.4\textwidth}
+				\begin{itemize}
+					\item In this column,
+					\item we just add the
+					\item bullet points.
+				\end{itemize}
+			\end{column}
+		\end{columns}
+	\end{frame}
+
+
+\section{Example}
+
+\begin{frame}
+\frametitle{Literature}
+Fund managers inflate quarter-end NAV by purchasing stocks already in their portfolios.
+
+\begin{itemize}
+\item Sias and Starks (1997): tax-loss selling.
+\item Carhart et al (2002), Bernhardt and Davies (2005): cite managerial compensation incentives.
+\end{itemize}
+Existing models of funds have explained this in different ways.
+
+\begin{itemize}
+\item Bernhardt and Davis (2009) model fund managers who want to attract investor inflows.
+\begin{itemize}
+\item Trades have price impact: it is thus optimal to trade securities they already own.
+\end{itemize}
+\item Dow and Gorton (1997): portfolio pumping arises because uninformed portfolio managers try to mimick the holdings of informed portfolio managers.
+\end{itemize}
+\end{frame}
+
+\section{Acknowledgements}
+
+\begin{frame}{Acknowledgements}
+		The theme is developed on the base of \textsl{Saarland} theme by Kailash Budhathoki. The original version is available at:
+		\begin{url}
+		https://github.com/kailashbuki/beamerthemesaarland
+		\end{url}.
+\end{frame}
+	
+		
+		
+	
+\end{document}
