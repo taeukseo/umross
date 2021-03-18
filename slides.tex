@@ -1,16 +1,12 @@
 % the sample slide is created with 16:9 aspect ratio
 \documentclass[aspectratio=169]{beamer}
-%\documentclass{beamer}
 \useoutertheme{miniframes}
 
 \usepackage[sfdefault]{FiraSans}
 \usepackage[T1]{fontenc}
 
 % remove the options if you do not want to have them
-\usetheme[
-	background=empty,
-	logo=rosslogo
-]{UMRoss}
+\usetheme[background=empty,logo=rosslogo]{UMRoss}
 
 % the background and logo are in the images directory
 \graphicspath{{images/}}
@@ -23,79 +19,73 @@
 \date{\today}
 
 \begin{document}
-	% use plain option to remove the page number from the title slide
-	\begin{frame}[plain]
-		\titlepage
-	\end{frame}
+
+% use plain option to remove the page number from the title slide
+\begin{frame}[plain]
+	\titlepage
+\end{frame}
 
 \section{Introduction}
 	
-	\begin{frame}{Welcome to Ross!}
+\begin{frame}{Welcome to Ross!}
 	Michigan is a Midwestern state of the United States of America. 
 	\vfill
+	\begin{itemize}
+		\item Residents of Michigan are known as \emph{Michiganders}.
 		\begin{itemize}
-			\item Residents of Michigan are known as \emph{Michiganders}.
-				\begin{itemize}
-					\item I am a subitem
-				\end{itemize}
-			\item Artes, Scientia, Veritas.
-			\item \textbf{this is a bold text}
-			\item \alert{this is an alert}.
+			\item I am a subitem
 		\end{itemize}
-	\end{frame}
+		\item Artes, Scientia, Veritas.
+		\item \textbf{this is a bold text}
+		\item \alert{this is an alert}.
+	\end{itemize}
+\end{frame}
 
-	\begin{frame}{Blocks}
-		\framesubtitle{This is a subtitle}
-		\begin{block}{Standard Block}
-			This is a standard block.
-		\end{block}
-	
-	\end{frame}
-	
-	\begin{frame}{Math}
-		Mathematics is the queen of sciences and arithmetic is the queen of mathematics.
-		\begin{align*}
-			\Pr(Y \geq 120) &= \Pr\left(Y-n\mu \geq 120-n\mu \right)\\
-			&= \Pr\left( \frac{Y-n\mu }{\sqrt{n}\sigma} \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
-			&=\Pr\left( Z \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
-			&=\Pr\left( Z \geq \frac{120-100 \cdot 1 }{10 \cdot 1} \right)\\
-			&=\Pr\left( Z \geq 2\right)
-		\end{align*}
-	\end{frame}
+\begin{frame}{Blocks}
+	\framesubtitle{This is a subtitle}
+	\begin{block}{Standard Block}
+		This is a standard block.
+	\end{block}
+\end{frame}
 
-	\begin{frame}{Two Columns}
-		We can also add two columns in the slides.
-		\begin{columns}[t]
-			\begin{column}[T]{0.4\textwidth}
-				This is the first column. In this column, we can also add a block for instance.
-				\vspace{1em}
-				\begin{block}{Block}
-					I am a block in a column.
-				\end{block}
-			\end{column}
-			\begin{column}[T]{0.4\textwidth}
-				\begin{itemize}
-					\item In this column,
-					\item we just add the
-					\item bullet points.
-				\end{itemize}
-			\end{column}
-		\end{columns}
-	\end{frame}
+\begin{frame}{Math}
+	Mathematics is the queen of sciences and arithmetic is the queen of mathematics.
+	\begin{align*}
+		\Pr(Y \geq 120) &= \Pr\left(Y-n\mu \geq 120-n\mu \right)\\
+		&= \Pr\left( \frac{Y-n\mu }{\sqrt{n}\sigma} \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
+		&=\Pr\left( Z \geq \frac{120-n\mu }{\sqrt{n}\sigma} \right)\\
+		&=\Pr\left( Z \geq \frac{120-100 \cdot 1 }{10 \cdot 1} \right)\\
+		&=\Pr\left( Z \geq 2\right)
+	\end{align*}
+\end{frame}
 
-\section{Example}
+\begin{frame}{Two Columns}
+	We can also add two columns in the slides.
+	\begin{columns}[t]
+		\begin{column}[T]{0.4\textwidth}
+			This is the first column. In this column, we can also add a block for instance.
+			\vspace{1em}
+			\begin{block}{Block}
+				I am a block in a column.
+			\end{block}
+		\end{column}
+		\begin{column}[T]{0.4\textwidth}
+			\begin{itemize}
+				\item In this column,
+				\item we just add the
+				\item bullet points.
+			\end{itemize}
+		\end{column}
+	\end{columns}
+\end{frame}
 
 \section{Acknowledgements}
 
 \begin{frame}{Acknowledgements}
-	
-		The theme is developed on the base of \textsl{Saarland} theme by Kailash Budhathoki. The original version is available at:
-		\begin{url}
+	The theme is developed on the base of \textsl{Saarland} theme by Kailash Budhathoki. The original version is available at:
+	\begin{url}
 		https://github.com/kailashbuki/beamerthemesaarland
-		\end{url}.
+	\end{url}.
 \end{frame}
-	
-		
-		
-	
+
 \end{document}

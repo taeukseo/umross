@@ -1,6 +1,6 @@
 # UMRoss
 
-This small beamer theme for UM Ross School of Business - subject to improvement.
+This is a small beamer theme for University of Michigan Ross School of Business.
 
 It has been developed on the basis of *Saarland* theme by Kailash Budhathoki. The original version is available at: https://github.com/kailashbuki/beamerthemesaarland.
 
