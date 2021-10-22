@@ -2,8 +2,6 @@
 
 \mode<presentation>
 
-\DeclareOptionBeamer{background}{\def\beamer@UMRoss@background{#1}}
-\ExecuteOptionsBeamer{background=} % Default value is empty
 \DeclareOptionBeamer{logo}{\def\beamer@UMRoss@logo{#1}}
 \ExecuteOptionsBeamer{logo=} % Default value is empty
 \ProcessOptionsBeamer
@@ -16,18 +14,6 @@
         \usebeamerfont{page number in head/foot}%
         \insertframenumber\,/\,\inserttotalframenumber\kern1em%
  }
-
-
-% we insert the watermark background from the sidebar
-\setbeamertemplate{sidebar right}
-{
-	\if \beamer@UMRoss@background\@empty
-	\else
-		\vskip.1\beamer@leftmargin%
-		\vfill%
-		\llap{\includegraphics[width=.5\paperwidth,height=.5\paperheight]{\beamer@UMRoss@background}}
-	\fi
-}
 
 % customisation for the title page
 \setbeamertemplate{title page}
