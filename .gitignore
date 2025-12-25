@@ -2,8 +2,8 @@
 *.fdb_latexmk
 *.fls
 *.log
-slides.nav
+*.nav
 *.out
-slides.snm
-slides.synctex.gz
+*.snm
+*.synctex.gz
 *.toc
