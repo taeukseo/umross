@@ -1,15 +1,100 @@
+% ============================================================================
+% UMRoss Beamer Theme
+% An unofficial theme for the Stephen M. Ross School of Business
+% University of Michigan
+% ============================================================================
+
 \mode<presentation>
 
-\DeclareOptionBeamer{background}{\PassOptionsToPackage{background=#1}{beamerouterthemeUMRoss}}
-\DeclareOptionBeamer{logo}{\PassOptionsToPackage{logo=#1}{beamerouterthemeUMRoss}}
+% Required packages
+\usepackage{tikz}
+
+% Theme options
+\DeclareOptionBeamer{logo}{\def\beamer@UMRoss@logo{#1}}
+\ExecuteOptionsBeamer{logo=}
 \ProcessOptionsBeamer
 
-\usecolortheme{UMRoss}	% calls beamercolorthemeUMRoss.sty
-\usefonttheme{UMRoss}		% calls beamerfontthemeUMRoss.sty
-\useinnertheme{UMRoss}	% calls beamerinnerthemeUMRoss.sty
-\useoutertheme{UMRoss}	% calls beamerouterthemeUMRoss.sty
+% ============================================================================
+% COLOR THEME
+% ============================================================================
 
-\setbeamertemplate{navigation symbols}{} 	% turn off pdf navigation symbols
+% UMRoss color definitions (CMYK for printing)
+\definecolor{UMblue}{cmyk}{1,0.65,0,0.55}
+\definecolor{UMMAtan}{cmyk}{0.14,0.2,0.44,0}
+\definecolor{HillBrown}{cmyk}{0.0000,0.8525,0.7705,0.5216}
+
+% Additional colors (RGB)
+\definecolor{navyblue}{RGB}{0, 47, 92}
+\definecolor{turquoise}{RGB}{85, 179, 162}
+\definecolor{lightred}{RGB}{196, 91, 46}
+\definecolor{gray}{RGB}{128, 128, 128}
+
+% Apply colors to beamer elements
+\setbeamercolor{structure}{fg=gray, bg=white}
+\setbeamercolor{frametitle}{fg=UMblue}
+\setbeamercolor{framesubtitle}{fg=UMblue}
+\setbeamercolor{alerted text}{fg=HillBrown}
+\setbeamercolor{title}{fg=UMblue}
+\setbeamercolor{subtitle}{fg=UMblue}
+
+% Block colors
+\setbeamercolor{block title}{bg=UMMAtan!20!white, fg=UMblue}
+\setbeamercolor{block body}{bg=UMMAtan!17!white}
+\setbeamercolor{block title example}{fg=turquoise!30!white,bg=turquoise!40!black}
+\setbeamercolor{block body example}{parent=normal text,bg=turquoise, fg=white}
+\setbeamercolor{block title alerted}{fg=lightred!30!white,bg=lightred!40!black}
+\setbeamercolor{block body alerted}{parent=normal text,bg=lightred, fg=white}
+
+% ============================================================================
+% FONT THEME
+% ============================================================================
+
+% Uses default Beamer fonts
+% To customize, add font settings in your main .tex file
+
+% ============================================================================
+% INNER THEME
+% ============================================================================
+
+% Itemize bullets
+\defbeamertemplate{itemize item}{circ}%
+{\small\raise.2ex\hbox{\color{navyblue}$\bullet$}}
+\defbeamertemplate{itemize subitem}{circ}%
+{\small\raise.1ex\hbox{\color{navyblue}$\circ$}}
+\defbeamertemplate{itemize subsubitem}{circ}%
+{\scriptsize\raise.1ex\hbox{\color{navyblue}$\bullet$}}
+\setbeamertemplate{items}[circ]
+
+% ============================================================================
+% OUTER THEME
+% ============================================================================
+
+% Footer with logo and page numbers
+\setbeamertemplate{footline}{%
+	\includegraphics[height=0.5cm]{rosslogo.png}%
+	\hfill%
+	\usebeamercolor[fg]{page number in head/foot}%
+	\usebeamerfont{page number in head/foot}%
+	\insertframenumber\,/\,\inserttotalframenumber\kern1em%
+}
+
+% Title page layout
+\setbeamertemplate{title page}
+{
+	\usebeamerfont{title}{\usebeamercolor[fg]{title}\inserttitle}\par
+	\usebeamerfont{subtitle}{\usebeamercolor[fg]{subtitle}\insertsubtitle}\par
+	\bigskip
+	\usebeamerfont{author}\insertauthor\par
+	\usebeamerfont{institute}\insertinstitute\par
+	\usebeamerfont{date}\insertdate
+}
+
+% ============================================================================
+% GENERAL SETTINGS
+% ============================================================================
+
+% Turn off PDF navigation symbols
+\setbeamertemplate{navigation symbols}{}
 
 \mode<all>
 \endinput
